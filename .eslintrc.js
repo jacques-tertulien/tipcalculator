@@ -4,7 +4,7 @@ module.exports = {
     node: true,
   },
   extends: [
-    'plugin:vue/vue3-essential',
+    'plugin:vue/vue3-recommended',
     '@vue/airbnb',
   ],
   parserOptions: {
@@ -19,10 +19,12 @@ module.exports = {
       files: [
         '**/__tests__/*.{j,t}s?(x)',
         '**/tests/unit/**/*.spec.{j,t}s?(x)',
+        '*.vue',
       ],
       env: {
         jest: true,
       },
+      processor: 'vue/.vue',
     },
   ],
 };
